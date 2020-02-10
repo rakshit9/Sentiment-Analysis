@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+}
+
+.mainheading{
+    margin-top: 9%;
+    text-align: center;
+    font-size: 550%;
+    font-family: 'Megrim';
+    font-weight: 10000%;
+    color: white;
+}
+
+.subtitle{
+    color: white;
+}
+
