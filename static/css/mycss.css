@@ -1,0 +1,53 @@
+body{
+    background-color: #0d0d0d;
+}
+
+.mainheading{
+    margin-top: 8%;
+    text-align: center;
+    font-size: 600%;
+    font-family: 'Megrim';
+    font-weight: 10000%;
+    color: white;
+}
+
+.subtitle{
+    color: white;
+}
+
+.oletterclass{
+    width: 3.0%;
+}
+.subheading{
+    margin-top: 2%;
+    text-align: center;
+    font-size: 215%;
+    font-family: 'Megrim';
+    font-weight: 10000%;
+    color: white;
+}
+.hr-length {
+    color: orange;
+    margin-top: 3%;
+    margin-left: 48%;
+    width: 50px;
+  }
+
+  .set-button{
+      margin-top: %;
+      margin-left: 7.8%;
+  }
+
+  .inner-text-size{
+    font-size: 113%;   
+  }
+/* 
+  .adjust-social-media{
+      margin-top: 10000%;
+  } */
+  
+  .siriimg {
+      margin-top: 5%;
+    margin-left: 36%;
+  }
+

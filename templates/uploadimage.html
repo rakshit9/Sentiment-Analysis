@@ -1,4 +1,90 @@
-<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Upload Image</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/uploadimage.css') }}" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
+  <!-- Compiled and minified JavaScript -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <script>
+    $(document).ready(function () {
+      setTimeout(function () {
+        $("#tempz").trigger('click');
+      }, 8000);
+    });
+  </script>
+</head>
+
+
+<body>
+  {% include "navbar.html" %}
+  <div style="text-align: center;color: white;" class="fontst">Analyse Emotions</div>
+  <div class="desc">From the image<br></div>
+
+
+  <form style="opacity: 0.5;" id="upload-form" action="{{ url_for('uploadimg') }}" method="POST"
+    enctype="multipart/form-data">
+
+
+    <!-- <input id="file-picker" type="file" name="file" multiple accept="image/*"> -->
+
+    <div class="adjust-upload">
+    <div class="upload-btn-wrapper">
+      <button class="panel bw subtitle">Upload a file</button>
+      <input id="file-picker" type="file" name="file" multiple accept="image/*" />
+    </div>
+  </div>
+    </div>
+    <!-- <div id="msg"></div> -->
+    <div style="display: none;" class="panel bw subtitle upload-btn-wrapper">
+      <button id="tempz" type="submit" value="Upload!" id="upload-button">
+        CHOOSE IMAGE </button>
+    </div>
+
+  </form>
+
+  <!-- <div style="margin-right: 45%;">
+<i class=" right small material-icons">file_upload</i>
+</div> -->
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <title>Upload</title>
@@ -30,4 +116,4 @@
    
 
 </script>
-</html>
+</html> -->

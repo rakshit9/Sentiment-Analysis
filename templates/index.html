@@ -2,22 +2,58 @@
 
 <head>
   <title>AI Emotion Detector</title>
-  <link rel="stylesheet" type="text/css" href="./css/mycss.css">
-  <link rel="stylesheet" href="./css/buttoncss.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./css/mycss.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mycss.css') }}" />
+  <!-- <link rel="stylesheet" href="./css/buttoncss.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/buttoncss.css') }}" />
+  <!-- <link rel="stylesheet" href="./css/social-media.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/social-media.css') }}" />
   <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+    $(document).ready(function () {
+      $(".trigger").click(function () {
+        $(".menu").toggleClass("active");
+      });
+    });
+  </script>
 </head>
 
 <body>
-  <div class="mainheading">AI Emti<img src="./image/o-letter.png" class="oletterclass">n Detector</div>
+  
+  <div class="mainheading">AI Emoti<img src="{{url_for('static', filename='photos/o-letter.png')}}" class="oletterclass">n Detector</div>
   <div class="subheading">"Detect your emotion"</div>
   <!-- <div class="hr-length">
   <hr>
   </div> -->
-  <div class="panel bw">
-  <button><a href="livewebcam" class="subtitle">Image Analysis</a></button>
-  <button><a href="uploadvideo" class="subtitle">Video Analysis</a></button>
-  <button><a href="uploadimage" class="subtitle">Live Analysis</a></button>
+  <div class="set-button">
+    <div class="panel bw" style="display:inline;">
+      <a href="http://0.0.0.0:5000/uploadimage" class="subtitle"><button>
+          <div class="inner-text-size">IMAGE ANALYSIS</div>
+        </button></a>
+    </div>
+    <div class="panel bw" style="display:inline;">
+      <a href="http://0.0.0.0:5000/uploadvideo" class="subtitle"><button>
+          <div class="inner-text-size">VIDEO ANALYSIS</div>
+        </button></a>
+    </div>
+    <div class="panel bw" style="display:inline;">
+      <a href="http://0.0.0.0:5000/livewebcam" class="subtitle"><button>
+          <div class="inner-text-size">LIVE ANALYSIS</div>
+          
+        </button></a>
+    </div>
   </div>
+
+  
+  <div class="siriimg">
+    <img src="{{url_for('static', filename='photos/siri.jpg')}}" alt="AI Emotion Detector" width="42%"> 
+  </div>
+
 </body>
 
 </html>
+
+

@@ -1,4 +1,54 @@
-<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Output Image</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/uploadimage.css') }}" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
+  <!-- Compiled and minified JavaScript -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+
+
+<body>
+  {% include "navbar.html" %}
+  <div style="text-align: center;color: white;" class="class-for-imagesentiment-heading">Analysed Emotions</div>
+<div class="class-for-imagesentiment-image">
+  <img id="bg" src="{{ url_for('image_feed') }}"> 
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,4 +66,4 @@
 {{fname}}
   
 </body>
-</html>
+</html> -->
