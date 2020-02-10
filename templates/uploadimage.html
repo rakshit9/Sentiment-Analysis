@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+  <h1>upload image</h1>
+    
+
+
+<form id="upload-form" action="{{ url_for('uploadimg') }}" method="POST" enctype="multipart/form-data">
+
+    <strong>Files:</strong><br>
+    <input id="file-picker" type="file" name="file" multiple  accept="image/*">
+    <div id="msg"></div>
+    <input type="submit" value="Upload!" id="upload-button">
+</form>
+
+
+
+
+
+
+
+
+</body>
+<script>
+
+   
+
+</script>
+</html>
