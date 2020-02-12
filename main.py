@@ -1,7 +1,5 @@
 from flask import Flask, render_template, Response,redirect,abort,request,url_for
 from camera import VideoCamera
-
-from werkzeug import secure_filename
 import os
 
 
@@ -14,7 +12,7 @@ global imageaddr
 global flag
 
 @app.route('/',methods=["GET","POST"])
-
+@app.route('/home',methods=["GET","POST"])
 def index():
     return render_template('index.html')
 
@@ -27,12 +25,6 @@ def livewebcam():
     global flag
     flag=0
     return render_template('livewebcam.html')
-
-
-
-
-
-
 
 
 
@@ -64,7 +56,7 @@ def uploadimg():
        # print(destination)
         global imageaddr
         imageaddr=destination
-        fname=filename
+        
         global flag
         flag=2
         file.save(destination)
@@ -142,18 +134,10 @@ def video_feed():
     return Response(gen(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-
-
-
-
-
-
-
 def genimage():    
     global imageaddr
     if flag==2:
         obj = VideoCamera(imageaddr)
-    
     
     
     while True:

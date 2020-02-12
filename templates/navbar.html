@@ -7,20 +7,20 @@ $('.dropdown-trigger').dropdown();
 <body>
 <nav class="black">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo">&nbsp;&nbsp;AI Emoti<img style="height:18px ;width:18px;"
+        <a href="home" class="brand-logo">&nbsp;&nbsp;AI Emoti<img style="height:18px ;width:18px;"
                 src="{{url_for('static', filename='photos/o-letter.png')}}">n
             Detection</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Home <i class=" right small material-icons">home</i></a></li>
+            <li><a href="home">Home <i class=" right small material-icons">home</i></a></li>
             <li>
 
                 <a class='dropdown-trigger black' href='#' data-target='dropdown4'>&nbsp;&nbsp;&nbsp;Modules <i
                         class="right small material-icons">style</i>&nbsp;&nbsp;&nbsp;</a>
 
                 <ul id='dropdown4' class='dropdown-content black '>
-                    <li><a class="white-text center" href="#!">Image Analysis</a></li>
-                    <li><a class="white-text center" href="#!">Video Analysis</a></li>
-                    <li><a class="white-text center" href="#!">Live Analysis</a></li>
+                    <li><a class="white-text center" href="uploadimage">Image Analysis</a></li>
+                    <li><a class="white-text center" href="uploadvideo">Video Analysis</a></li>
+                    <li><a class="white-text center" href="livewebcam">Live Analysis</a></li>
 
                 </ul>
             </li>
