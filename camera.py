@@ -80,8 +80,8 @@ class VideoCamera:
         labels = []
 
         
-        width = 350
-        height = 450
+        width = 450
+        height = 550
         dim = (width, height)
             
 
@@ -92,9 +92,9 @@ class VideoCamera:
 
         faces = faceCascade.detectMultiScale(
             gray,
-            scaleFactor=1.1,
+            scaleFactor=1.5,
             minNeighbors=5,
-            minSize=(30, 30),
+            minSize=(35, 35),
             flags=cv2.CASCADE_SCALE_IMAGE
         )
 
